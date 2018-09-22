@@ -11,7 +11,7 @@ REPO_NAME=${1:-template-dockerfile}
 git clone --depth 1 https://github.com/tmknom/template-dockerfile.git ${REPO_NAME}
 
 cd ${REPO_NAME}
-rm -rf ${0} .git
+rm -rf install .git
 
 git init
 git add .
