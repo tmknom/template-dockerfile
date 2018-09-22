@@ -2,7 +2,7 @@
 #
 # https://docs.docker.com/docker-cloud/builds/advanced/
 
-sex -x
+set -x
 
 BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"`
 VCS_REF=`git rev-parse --short HEAD`
