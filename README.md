@@ -15,19 +15,21 @@ Dockerfile template.
 
 ## Usage
 
-### Default
-
-```sh
-curl -fsSL https://raw.githubusercontent.com/tmknom/template-dockerfile/master/install | sh -s
-cd template-dockerfile
-```
-
-### Specify repository name
+### 1. Install template
 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/tmknom/template-dockerfile/master/install | sh -s example
 cd example
 ```
+
+### 2. Prepare GitHub, CircleCI and Docker Hub
+
+1. Create repository on GitHub
+    - <https://help.github.com/articles/create-a-repo/>
+2. Setting up your build on CircleCI
+    - <https://circleci.com/docs/2.0/getting-started/#setting-up-your-build-on-circleci>
+3. Configure automated builds on Docker Hub
+    - <https://docs.docker.com/docker-hub/builds/#create-an-automated-build>
 
 ## Makefile targets
 
