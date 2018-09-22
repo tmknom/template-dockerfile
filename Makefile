@@ -5,7 +5,10 @@
 
 
 # Constant definitions
-IMAGE_TAG := tmknom/template-dockerfile:latest
+REPO_NAME := tmknom/template-dockerfile
+DOCKER_REPO := index.docker.io/${REPO_NAME}
+IMAGE_TAG := latest
+IMAGE_NAME := $(shell echo ${DOCKER_REPO} | cut -d / -f 2,3):${IMAGE_TAG}
 
 # Phony Targets
 install: ## Install requirements
@@ -14,8 +17,8 @@ install: ## Install requirements
 	docker pull tmknom/markdownlint
 
 build: ## Build docker image
-	docker build -t ${IMAGE_TAG} .
-	docker images ${IMAGE_TAG}
+	DOCKER_REPO=${DOCKER_REPO} DOCKER_TAG=${IMAGE_TAG} IMAGE_NAME=${IMAGE_NAME} hooks/build
+	docker images ${REPO_NAME}
 
 lint: lint-markdown lint-dockerfile ## Lint
 
