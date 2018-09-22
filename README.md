@@ -52,7 +52,7 @@ Automatically deployed by "[DockerHub Automated Build](https://docs.docker.com/d
 2. Setting up your build on CircleCI
     - <https://circleci.com/docs/2.0/getting-started/#setting-up-your-build-on-circleci>
 3. Configure automated builds on Docker Hub
-    - <https://hub.docker.com/r/tmknom/template-dockerfile/>
+    - <https://docs.docker.com/docker-hub/builds/#create-an-automated-build>
 4. Configure webhook on MicroBadger
     - <https://medium.com/microscaling-systems/microbadger-keep-your-metadata-fresh-with-a-webhook-651ee26cd4a6>
 
