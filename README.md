@@ -34,10 +34,10 @@ cd example
 ## Makefile targets
 
 ```text
-build                          Build docker
+build                          Build docker image
 help                           Show help
 install                        Install requirements
-lint                           Lint dockerfile and markdown
+lint                           Lint
 ```
 
 ## Development

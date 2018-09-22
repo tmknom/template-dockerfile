@@ -13,11 +13,11 @@ install: ## Install requirements
 	docker pull hadolint/hadolint
 	docker pull tmknom/markdownlint
 
-build: ## Build docker
+build: ## Build docker image
 	docker build -t ${IMAGE_TAG} .
 	docker images ${IMAGE_TAG}
 
-lint: lint-markdown lint-dockerfile ## Lint dockerfile and markdown
+lint: lint-markdown lint-dockerfile ## Lint
 
 lint-markdown:
 	docker run --rm -i -v $(CURDIR):/work tmknom/markdownlint
