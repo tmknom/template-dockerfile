@@ -12,6 +12,8 @@ git clone --depth 1 https://github.com/tmknom/template-dockerfile.git ${REPO_NAM
 
 cd ${REPO_NAME}
 rm -rf install .git
+sed -i "" -e "s/template-dockerfile/${REPO_NAME}/g" README.md
+sed -i "" -e "s/template-dockerfile/${REPO_NAME}/g" Makefile
 
 git init
 git add .
