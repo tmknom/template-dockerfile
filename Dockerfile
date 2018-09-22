@@ -4,6 +4,7 @@ FROM alpine:3.8
 ARG BUILD_DATE
 ARG VCS_REF
 ARG VERSION
+ARG REPO_NAME
 LABEL maintainer="tmknom" \
       org.label-schema.vendor="tmknom" \
       org.label-schema.name=$REPO_NAME \
