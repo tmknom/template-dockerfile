@@ -4,9 +4,12 @@
 
 printenv
 
+REPO_NAME=`echo ${DOCKER_REPO}  | cut -d / -f 2,3`
+echo ${REPO_NAME}
+
 docker build \
   --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
   --build-arg VCS_REF=`git rev-parse --short HEAD` \
   --build-arg VERSION=${DOCKER_TAG:-latest} \
-  --build-arg REPO_NAME=${DOCKER_REPO#*/*} \
+  --build-arg REPO_NAME=${REPO_NAME} \
   -t ${IMAGE_NAME} .
