@@ -5,8 +5,7 @@ ARG BUILD_DATE
 ARG VCS_REF
 ARG VERSION
 ARG REPO_NAME
-LABEL maintainer="tmknom" \
-      org.label-schema.vendor="tmknom" \
+LABEL org.label-schema.vendor="tmknom" \
       org.label-schema.name=$REPO_NAME \
       org.label-schema.description="Dockerfile template." \
       org.label-schema.build-date=$BUILD_DATE \
