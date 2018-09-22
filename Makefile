@@ -17,6 +17,14 @@ build: ## Build docker
 	docker build -t ${IMAGE_TAG} .
 	docker images ${IMAGE_TAG}
 
+lint: lint-markdown lint-dockerfile ## Lint dockerfile and markdown
+
+lint-markdown:
+	docker run --rm -i -v $(CURDIR):/work tmknom/markdownlint
+
+lint-dockerfile:
+	docker run --rm -i hadolint/hadolint < Dockerfile
+
 
 # https://postd.cc/auto-documented-makefile/
 help: ## Show help
