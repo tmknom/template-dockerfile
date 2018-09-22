@@ -8,7 +8,19 @@ Dockerfile template.
 
 ## Usage
 
-Write usage.
+### Default
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/tmknom/template-dockerfile/master/install | sh -s
+cd template-dockerfile
+```
+
+### Specify repository name
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/tmknom/template-dockerfile/master/install | sh -s example
+cd example
+```
 
 ## Makefile targets
 
