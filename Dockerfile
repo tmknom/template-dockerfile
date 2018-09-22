@@ -6,14 +6,14 @@ ARG VCS_REF
 ARG VERSION
 LABEL maintainer="tmknom" \
       org.label-schema.vendor="tmknom" \
-      org.label-schema.name="template-dockerfile" \
+      org.label-schema.name=$REPO_NAME \
       org.label-schema.description="Dockerfile template." \
       org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.version=$VERSION \
       org.label-schema.vcs-ref=$VCS_REF \
-      org.label-schema.vcs-url="https://github.com/tmknom/template-dockerfile" \
-      org.label-schema.usage="https://github.com/tmknom/template-dockerfile/blob/master/README.md#usage" \
-      org.label-schema.docker.cmd="docker run --rm -i tmknom/template-dockerfile" \
+      org.label-schema.vcs-url="https://github.com/$REPO_NAME" \
+      org.label-schema.usage="https://github.com/$REPO_NAME/blob/master/README.md#usage" \
+      org.label-schema.docker.cmd="docker run --rm -i $REPO_NAME" \
       org.label-schema.schema-version="1.0"
 
 WORKDIR /work
