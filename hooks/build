@@ -1,9 +1,12 @@
 #!/bin/bash
 #
 # https://docs.docker.com/docker-cloud/builds/advanced/
+
+printenv
+
 docker build \
   --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
   --build-arg VCS_REF=`git rev-parse --short HEAD` \
-  --build-arg VERSION=${CACHE_TAG:-latest} \
-  --build-arg REPO_NAME=${DOCKER_REPO} \
+  --build-arg VERSION=${DOCKER_TAG:-latest} \
+  --build-arg REPO_NAME=${DOCKER_REPO#*/*} \
   -t ${IMAGE_NAME} .
