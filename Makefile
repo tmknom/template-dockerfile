@@ -4,10 +4,18 @@
 .PHONY: $(shell grep -E '^[a-zA-Z_-]+:' $(MAKEFILE_LIST) | sed 's/://')
 
 
+# Constant definitions
+IMAGE_TAG := tmknom/template-dockerfile:latest
+
+# Phony Targets
 install: ## Install requirements
 	@type docker >/dev/null 2>&1 || (echo "ERROR: docker not found (brew install docker)"; exit 1)
 	docker pull hadolint/hadolint
 	docker pull tmknom/markdownlint
+
+build: ## Build docker
+	docker build -t ${IMAGE_TAG} .
+	docker images ${IMAGE_TAG}
 
 
 # https://postd.cc/auto-documented-makefile/
