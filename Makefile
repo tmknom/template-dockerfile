@@ -10,6 +10,7 @@ DOCKER_REPO := index.docker.io/${REPO_NAME}
 IMAGE_TAG := latest
 IMAGE_NAME := $(shell echo ${DOCKER_REPO} | cut -d / -f 2,3):${IMAGE_TAG}
 
+
 # Phony Targets
 install: ## Install requirements
 	@type docker >/dev/null 2>&1 || (echo "ERROR: docker not found (brew install docker)"; exit 1)
@@ -23,7 +24,7 @@ build: ## Build docker image
 lint: lint-markdown lint-dockerfile ## Lint
 
 lint-markdown:
-	docker run --rm -i -v $(CURDIR):/work tmknom/markdownlint
+	docker run --rm -i -v "$(CURDIR):/work" tmknom/markdownlint
 
 lint-dockerfile:
 	docker run --rm -i hadolint/hadolint < Dockerfile
