@@ -44,19 +44,6 @@ make install
 
 Automatically deployed by "[DockerHub Automated Build](https://docs.docker.com/docker-hub/builds/)" after merge.
 
-## Continuous Deployment
-
-### Prepare
-
-1. Create repository on GitHub
-   - <https://help.github.com/articles/create-a-repo/>
-2. Setting up your build on CircleCI
-   - <https://circleci.com/docs/2.0/getting-started/#setting-up-your-build-on-circleci>
-3. Configure automated builds on Docker Hub
-   - <https://docs.docker.com/docker-hub/builds/#create-an-automated-build>
-4. Configure webhook on MicroBadger
-   - <https://medium.com/microscaling-systems/microbadger-keep-your-metadata-fresh-with-a-webhook-651ee26cd4a6>
-
 ### Deployment Pipeline
 
 1. GitHub - Version Control System
