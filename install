@@ -17,7 +17,7 @@ sed -i "" -e "s/template-dockerfile/${REPO_NAME}/g" Makefile
 
 git init
 git add .
-git commit -m "Initial commit"
+git commit -m "Initial commit" -m "Based on https://github.com/tmknom/template-dockerfile"
 
 set +x
 echo "\n  Install success!"
