@@ -21,7 +21,7 @@ build: ## Build docker image
 	DOCKER_REPO=${DOCKER_REPO} DOCKER_TAG=${IMAGE_TAG} IMAGE_NAME=${IMAGE_NAME} hooks/build
 	docker images ${REPO_NAME}
 
-lint: lint-markdown lint-dockerfile lint-shellscript ## Lint
+lint: lint-markdown lint-dockerfile lint-shellscript ## Lint code
 
 lint-markdown:
 	docker run --rm -i -v "$(CURDIR):/work" tmknom/markdownlint
@@ -33,7 +33,7 @@ lint-shellscript:
 	docker run --rm -v "$(CURDIR):/mnt" koalaman/shellcheck hooks/build
 	docker run --rm -v "$(CURDIR):/mnt" koalaman/shellcheck install
 
-format: format-shellscript ## Format
+format: format-shellscript ## Format code
 
 format-shellscript:
 	docker run --rm -v "$(CURDIR):/work" -w /work jamesmstone/shfmt -i 2 -ci -kp -w hooks/build
