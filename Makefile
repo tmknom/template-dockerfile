@@ -21,7 +21,7 @@ build: ## Build docker image
 	DOCKER_REPO=${DOCKER_REPO} DOCKER_TAG=${IMAGE_TAG} IMAGE_NAME=${IMAGE_NAME} hooks/build
 	docker images ${REPO_NAME}
 
-lint: lint-markdown lint-dockerfile ## Lint
+lint: lint-markdown lint-dockerfile lint-shellscript ## Lint
 
 lint-markdown:
 	docker run --rm -i -v "$(CURDIR):/work" tmknom/markdownlint
