@@ -4,10 +4,10 @@
 
 set -x
 
-BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"`
-VCS_REF=`git rev-parse --short HEAD`
+BUILD_DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+VCS_REF=$(git rev-parse --short HEAD)
 VERSION=${DOCKER_TAG}
-REPO_NAME=`echo "${DOCKER_REPO}" | cut -d / -f 2,3`
+REPO_NAME=$(echo "${DOCKER_REPO}" | cut -d / -f 2,3)
 
 docker build \
   --build-arg BUILD_DATE="${BUILD_DATE}" \
