@@ -24,9 +24,10 @@ cd example
 
 ```text
 build                          Build docker image
+format                         Format code
 help                           Show help
 install                        Install requirements
-lint                           Lint
+lint                           Lint code
 ```
 
 ## Development
