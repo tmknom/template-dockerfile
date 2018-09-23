@@ -36,8 +36,8 @@ lint-shellscript:
 format: format-shellscript ## Format
 
 format-shellscript:
-	docker run --rm -v "$(CURDIR):/work" -w /work jamesmstone/shfmt -w hooks/build
-	docker run --rm -v "$(CURDIR):/work" -w /work jamesmstone/shfmt -w install
+	docker run --rm -v "$(CURDIR):/work" -w /work jamesmstone/shfmt -i 2 -ci -kp -w hooks/build
+	docker run --rm -v "$(CURDIR):/work" -w /work jamesmstone/shfmt -i 2 -ci -kp -w install
 
 # https://postd.cc/auto-documented-makefile/
 help: ## Show help
