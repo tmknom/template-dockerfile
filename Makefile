@@ -28,6 +28,10 @@ lint-markdown:
 lint-dockerfile:
 	docker run --rm -i hadolint/hadolint < Dockerfile
 
+lint-shellscript:
+	docker run -v "$(CURDIR):/mnt" koalaman/shellcheck hooks/build
+	docker run -v "$(CURDIR):/mnt" koalaman/shellcheck install
+
 
 # https://postd.cc/auto-documented-makefile/
 help: ## Show help
