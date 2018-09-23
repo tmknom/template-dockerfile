@@ -31,7 +31,6 @@ lint-dockerfile:
 
 lint-shellscript:
 	docker run --rm -v "$(CURDIR):/mnt" koalaman/shellcheck hooks/build
-	docker run --rm -v "$(CURDIR):/mnt" koalaman/shellcheck install
 
 format: format-shellscript format-markdown format-json ## Format code
 
