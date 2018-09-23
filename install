@@ -2,7 +2,7 @@
 
 set -eux
 
-if ! type git > /dev/null 2>&1; then
+if ! type git >/dev/null 2>&1; then
   echo "ERROR: git not found (brew install git)"
   exit 1
 fi
