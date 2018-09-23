@@ -9,7 +9,7 @@ jobs:
           name: Install requirements
           command: make install
       - run:
-          name: Lint
+          name: Lint code
           command: make lint
       - run:
           name: Build docker image
