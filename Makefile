@@ -17,6 +17,7 @@ install: ## Install requirements
 	docker pull hadolint/hadolint
 	docker pull tmknom/markdownlint
 	docker pull koalaman/shellcheck
+	docker pull jamesmstone/shfmt
 
 build: ## Build docker image
 	DOCKER_REPO=${DOCKER_REPO} DOCKER_TAG=${IMAGE_TAG} IMAGE_NAME=${IMAGE_NAME} hooks/build
