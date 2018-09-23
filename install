@@ -20,5 +20,5 @@ git add .
 git commit -m "Initial commit" -m "Based on https://github.com/tmknom/template-dockerfile"
 
 set +x
-echo "\n  Install success!"
-echo "\nNext step: cd ${REPO_NAME}"
+printf "\n  Install success!"
+printf "\nNext step: cd %s" "${REPO_NAME}"
