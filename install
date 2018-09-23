@@ -8,9 +8,9 @@ if ! type git > /dev/null 2>&1; then
 fi
 
 REPO_NAME=${1:-template-dockerfile}
-git clone --depth 1 https://github.com/tmknom/template-dockerfile.git ${REPO_NAME}
+git clone --depth 1 https://github.com/tmknom/template-dockerfile.git "${REPO_NAME}"
 
-cd ${REPO_NAME}
+cd "${REPO_NAME}"
 rm -rf install .git
 sed -i "" -e "s/template-dockerfile/${REPO_NAME}/g" README.md
 sed -i "" -e "s/template-dockerfile/${REPO_NAME}/g" Makefile
@@ -20,5 +20,5 @@ git add .
 git commit -m "Initial commit" -m "Based on https://github.com/tmknom/template-dockerfile"
 
 set +x
-echo "\n  Install success!"
-echo "\nNext step: cd ${REPO_NAME}"
+printf "\n  Install success!"
+printf "\nNext step: cd %s" "${REPO_NAME}"
