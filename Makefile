@@ -10,6 +10,10 @@ DOCKER_REPO := index.docker.io/${REPO_NAME}
 IMAGE_TAG := latest
 IMAGE_NAME := $(shell echo ${DOCKER_REPO} | cut -d / -f 2,3):${IMAGE_TAG}
 
+# Macro definitions
+define list_shellscript
+	grep '^#!' -rn . | grep ':1:#!' | cut -d: -f1 | grep -v .git
+endef
 
 # Phony Targets
 install: ## Install requirements
@@ -33,12 +37,12 @@ lint-dockerfile:
 	docker run --rm -i hadolint/hadolint < Dockerfile
 
 lint-shellscript:
-	grep '^#!' -rl . | grep -v .git | xargs -I {} docker run --rm -v "$(CURDIR):/mnt" koalaman/shellcheck {}
+	$(call list_shellscript) | xargs -I {} docker run --rm -v "$(CURDIR):/mnt" koalaman/shellcheck {}
 
 format: format-shellscript format-markdown format-json ## Format code
 
 format-shellscript:
-	grep '^#!' -rl . | grep -v .git | xargs -I {} docker run --rm -v "$(CURDIR):/work" -w /work jamesmstone/shfmt -i 2 -ci -kp -w {}
+	$(call list_shellscript) | xargs -I {} docker run --rm -v "$(CURDIR):/work" -w /work jamesmstone/shfmt -i 2 -ci -kp -w {}
 
 format-markdown:
 	docker run --rm -v "$(CURDIR):/work" tmknom/prettier --parser=markdown --write '**/*.md'
