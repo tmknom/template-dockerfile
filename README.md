@@ -51,7 +51,7 @@ Automatically deployed by "[DockerHub Automated Build](https://docs.docker.com/d
 2. CircleCI - Continuous Integration
    - <https://circleci.com/gh/tmknom/template-dockerfile>
 3. Docker Hub - Docker Registry
-   - <https://hub.docker.com/r/tmknom/template-dockerfile/>
+   - <https://hub.docker.com/r/tmknom/template-dockerfile>
 4. MicroBadger - Docker Inspection
    - <https://microbadger.com/images/tmknom/template-dockerfile>
 
