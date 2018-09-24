@@ -33,12 +33,12 @@ lint-dockerfile:
 	docker run --rm -i hadolint/hadolint < Dockerfile
 
 lint-shellscript:
-	docker run --rm -v "$(CURDIR):/mnt" koalaman/shellcheck hooks/build
+	grep '^#!' -rl . | grep -v .git | xargs -I {} docker run --rm -v "$(CURDIR):/mnt" koalaman/shellcheck {}
 
 format: format-shellscript format-markdown format-json ## Format code
 
 format-shellscript:
-	docker run --rm -v "$(CURDIR):/work" -w /work jamesmstone/shfmt -i 2 -ci -kp -w hooks/build
+	grep '^#!' -rl . | grep -v .git | xargs -I {} docker run --rm -v "$(CURDIR):/work" -w /work jamesmstone/shfmt -i 2 -ci -kp -w {}
 
 format-markdown:
 	docker run --rm -v "$(CURDIR):/work" tmknom/prettier --parser=markdown --write '**/*.md'
