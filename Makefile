@@ -23,6 +23,7 @@ install: ## Install requirements
 	docker pull koalaman/shellcheck
 	docker pull tmknom/shfmt
 	docker pull tmknom/prettier
+	docker pull tmknom/yamllint
 
 build: ## Build docker image
 	DOCKER_REPO=${DOCKER_REPO} DOCKER_TAG=${IMAGE_TAG} IMAGE_NAME=${IMAGE_NAME} hooks/build
