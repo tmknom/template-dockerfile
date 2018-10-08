@@ -11,7 +11,7 @@ REPO_NAME=${1:-template-dockerfile}
 git clone --depth 1 https://github.com/tmknom/template-dockerfile.git "${REPO_NAME}"
 
 cd "${REPO_NAME}"
-rm -rf install .git
+rm -rf install examples .git
 sed -i "" -e "s/template-dockerfile/${REPO_NAME}/g" README.md
 sed -i "" -e "s/template-dockerfile/${REPO_NAME}/g" Makefile
 
