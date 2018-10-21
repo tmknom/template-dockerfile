@@ -27,14 +27,7 @@ define check_requirement
 endef
 
 # Phony Targets
-install: ## Install requirements
-	@type docker >/dev/null 2>&1 || (echo "ERROR: docker not found (brew install docker)"; exit 1)
-	docker pull hadolint/hadolint
-	docker pull tmknom/markdownlint
-	docker pull koalaman/shellcheck
-	docker pull tmknom/shfmt
-	docker pull tmknom/prettier
-	docker pull tmknom/yamllint
+install: check-requirements install-images ## Install requirements
 
 install-images:
 	@for image in ${DOCKER_IMAGES}; do \
