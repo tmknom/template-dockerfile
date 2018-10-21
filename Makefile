@@ -19,6 +19,13 @@ define list_shellscript
 	grep '^#!' -rn . | grep ':1:#!' | cut -d: -f1 | grep -v .git
 endef
 
+define check_requirement
+	if ! type ${1} >/dev/null 2>&1; then \
+		printf "\nNot found %s, run command\n\n" ${1}; \
+		printf "    \033[36mbrew install %s\033[0m\n" ${1}; \
+	fi
+endef
+
 # Phony Targets
 install: ## Install requirements
 	@type docker >/dev/null 2>&1 || (echo "ERROR: docker not found (brew install docker)"; exit 1)
@@ -33,6 +40,9 @@ install-images:
 	@for image in ${DOCKER_IMAGES}; do \
 		echo "docker pull $${image}" && docker pull $${image}; \
 	done
+
+check-requirements:
+	@$(call check_requirement,docker)
 
 build: ## Build docker image
 	DOCKER_REPO=${DOCKER_REPO} DOCKER_TAG=${IMAGE_TAG} IMAGE_NAME=${IMAGE_NAME} hooks/build
