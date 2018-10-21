@@ -10,6 +10,10 @@ DOCKER_REPO := index.docker.io/${REPO_NAME}
 IMAGE_TAG := latest
 IMAGE_NAME := $(shell echo ${DOCKER_REPO} | cut -d / -f 2,3):${IMAGE_TAG}
 
+LINTER_IMAGES := hadolint/hadolint koalaman/shellcheck tmknom/markdownlint tmknom/yamllint
+FORMATTER_IMAGES := tmknom/shfmt tmknom/prettier
+DOCKER_IMAGES := ${LINTER_IMAGES} ${FORMATTER_IMAGES}
+
 # Macro definitions
 define list_shellscript
 	grep '^#!' -rn . | grep ':1:#!' | cut -d: -f1 | grep -v .git
@@ -24,6 +28,11 @@ install: ## Install requirements
 	docker pull tmknom/shfmt
 	docker pull tmknom/prettier
 	docker pull tmknom/yamllint
+
+install-images:
+	@for image in ${DOCKER_IMAGES}; do \
+		echo "docker pull $${image}" && docker pull $${image}; \
+	done
 
 build: ## Build docker image
 	DOCKER_REPO=${DOCKER_REPO} DOCKER_TAG=${IMAGE_TAG} IMAGE_NAME=${IMAGE_NAME} hooks/build
