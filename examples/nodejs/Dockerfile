@@ -17,7 +17,7 @@ LABEL org.label-schema.vendor="tmknom" \
       org.label-schema.schema-version="1.0"
 
 ARG NODEJS_VERSION=10.14.2-r0
-ARG MODULE_VERSION=2.0.3
+ARG MODULE_VERSION=3.0.0
 
 RUN set -x && \
     apk add --no-cache nodejs=${NODEJS_VERSION} nodejs-npm=${NODEJS_VERSION} && \
