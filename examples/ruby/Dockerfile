@@ -17,7 +17,7 @@ LABEL org.label-schema.vendor="tmknom" \
       org.label-schema.schema-version="1.0"
 
 ARG RUBY_VERSION=2.5.3-r1
-ARG MODULE_VERSION=1.16.6
+ARG MODULE_VERSION=2.0.1
 
 RUN set -x && \
     apk add --no-cache ruby=${RUBY_VERSION} && \
