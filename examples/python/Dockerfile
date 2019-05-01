@@ -17,7 +17,7 @@ LABEL org.label-schema.vendor="tmknom" \
       org.label-schema.schema-version="1.0"
 
 ARG PYTHON_VERSION=3.6.8-r2
-ARG MODULE_VERSION=1.16.28
+ARG MODULE_VERSION=1.16.149
 
 # https://github.com/JoshuaRLi/alpine-python3-pip/blob/master/Dockerfile
 RUN set -x && \
