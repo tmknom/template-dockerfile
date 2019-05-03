@@ -1,8 +1,8 @@
 # template-dockerfile
 
 [![CircleCI](https://circleci.com/gh/tmknom/template-dockerfile.svg?style=svg)](https://circleci.com/gh/tmknom/template-dockerfile)
-[![Docker Build Status](https://img.shields.io/docker/build/tmknom/template-dockerfile.svg)](https://hub.docker.com/r/tmknom/template-dockerfile/builds/)
-[![Docker Automated build](https://img.shields.io/docker/automated/tmknom/template-dockerfile.svg)](https://hub.docker.com/r/tmknom/template-dockerfile/)
+[![Docker Build Status](https://img.shields.io/docker/cloud/build/tmknom/template-dockerfile.svg)](https://hub.docker.com/r/tmknom/template-dockerfile/builds/)
+[![Docker Automated build](https://img.shields.io/docker/cloud/automated/tmknom/template-dockerfile.svg)](https://hub.docker.com/r/tmknom/template-dockerfile/)
 [![MicroBadger Size](https://img.shields.io/microbadger/image-size/tmknom/template-dockerfile.svg)](https://microbadger.com/images/tmknom/template-dockerfile)
 [![MicroBadger Layers](https://img.shields.io/microbadger/layers/tmknom/template-dockerfile.svg)](https://microbadger.com/images/tmknom/template-dockerfile)
 [![License](https://img.shields.io/github/license/tmknom/template-dockerfile.svg)](https://opensource.org/licenses/Apache-2.0)
