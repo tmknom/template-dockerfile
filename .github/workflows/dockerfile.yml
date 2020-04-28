@@ -4,7 +4,7 @@ on:
 
 jobs:
   format:
-    name: Lint
+    name: Format
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
