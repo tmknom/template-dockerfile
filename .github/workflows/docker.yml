@@ -1,0 +1,17 @@
+name: Docker
+on:
+  pull_request:
+
+jobs:
+  format:
+    name: Lint
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.1.0
+      - name: hadolint
+        uses: reviewdog/action-hadolint@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          reporter: github-pr-review
