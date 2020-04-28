@@ -6,10 +6,10 @@
 [![YAML Actions Status](https://github.com/tmknom/template-dockerfile/workflows/YAML/badge.svg)](https://github.com/tmknom/template-dockerfile/actions?query=workflow%3AYAML)
 [![JSON Actions Status](https://github.com/tmknom/template-dockerfile/workflows/JSON/badge.svg)](https://github.com/tmknom/template-dockerfile/actions?query=workflow%3AJSON)
 
-[![Docker Build Status](https://img.shields.io/docker/cloud/build/tmknom/template-dockerfile.svg)](https://hub.docker.com/r/tmknom/template-dockerfile/builds/)
-[![Docker Automated build](https://img.shields.io/docker/cloud/automated/tmknom/template-dockerfile.svg)](https://hub.docker.com/r/tmknom/template-dockerfile/)
-[![MicroBadger Size](https://img.shields.io/microbadger/image-size/tmknom/template-dockerfile.svg)](https://microbadger.com/images/tmknom/template-dockerfile)
-[![MicroBadger Layers](https://img.shields.io/microbadger/layers/tmknom/template-dockerfile.svg)](https://microbadger.com/images/tmknom/template-dockerfile)
+[![Docker Build Status](https://img.shields.io/docker/cloud/build/tmknom/template-dockerfile.svg?logo=docker)](https://hub.docker.com/r/tmknom/template-dockerfile/builds/)
+[![Docker Automated build](https://img.shields.io/docker/cloud/automated/tmknom/template-dockerfile.svg?logo=docker)](https://hub.docker.com/r/tmknom/template-dockerfile/)
+[![MicroBadger Size](https://img.shields.io/microbadger/image-size/tmknom/template-dockerfile.svg?logo=docker)](https://microbadger.com/images/tmknom/template-dockerfile)
+[![MicroBadger Layers](https://img.shields.io/microbadger/layers/tmknom/template-dockerfile.svg?logo=docker)](https://microbadger.com/images/tmknom/template-dockerfile)
 [![License](https://img.shields.io/github/license/tmknom/template-dockerfile.svg)](https://opensource.org/licenses/Apache-2.0)
 
 Dockerfile template.
