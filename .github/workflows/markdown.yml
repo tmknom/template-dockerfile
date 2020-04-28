@@ -1,0 +1,14 @@
+name: Markdown
+on:
+  pull_request:
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.1.0
+      - name: shfmt
+        run: docker run --rm -i -v ${PWD}:/work tmknom/markdownlint
