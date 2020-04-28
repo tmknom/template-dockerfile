@@ -1,6 +1,5 @@
 # template-dockerfile
 
-[![CircleCI](https://circleci.com/gh/tmknom/template-dockerfile.svg?style=svg)](https://circleci.com/gh/tmknom/template-dockerfile)
 [![Docker Build Status](https://img.shields.io/docker/cloud/build/tmknom/template-dockerfile.svg)](https://hub.docker.com/r/tmknom/template-dockerfile/builds/)
 [![Docker Automated build](https://img.shields.io/docker/cloud/automated/tmknom/template-dockerfile.svg)](https://hub.docker.com/r/tmknom/template-dockerfile/)
 [![MicroBadger Size](https://img.shields.io/microbadger/image-size/tmknom/template-dockerfile.svg)](https://microbadger.com/images/tmknom/template-dockerfile)
@@ -48,8 +47,8 @@ Automatically deployed by "[DockerHub Automated Build](https://docs.docker.com/d
 
 1. GitHub - Version Control System
    - <https://github.com/tmknom/template-dockerfile>
-2. CircleCI - Continuous Integration
-   - <https://circleci.com/gh/tmknom/template-dockerfile>
+2. GitHub Actions - Continuous Integration
+   - <https://github.com/tmknom/template-dockerfile/actions>
 3. Docker Hub - Docker Registry
    - <https://hub.docker.com/r/tmknom/template-dockerfile>
 4. MicroBadger - Docker Inspection
