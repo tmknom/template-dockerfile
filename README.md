@@ -1,5 +1,11 @@
 # template-dockerfile
 
+[![Dockerfile Actions Status](https://github.com/tmknom/template-dockerfile/workflows/Dockerfile/badge.svg)](https://github.com/tmknom/template-dockerfile/actions?query=workflow%3ADockerfile)
+[![Shell Script Actions Status](https://github.com/tmknom/template-dockerfile/workflows/Shell%20Script/badge.svg)](https://github.com/tmknom/template-dockerfile/actions?query=workflow%3A%22Shell+Script%22)
+[![Markdown Actions Status](https://github.com/tmknom/template-dockerfile/workflows/Markdown/badge.svg)](https://github.com/tmknom/template-dockerfile/actions?query=workflow%3AMarkdown)
+[![YAML Actions Status](https://github.com/tmknom/template-dockerfile/workflows/YAML/badge.svg)](https://github.com/tmknom/template-dockerfile/actions?query=workflow%3AYAML)
+[![JSON Actions Status](https://github.com/tmknom/template-dockerfile/workflows/JSON/badge.svg)](https://github.com/tmknom/template-dockerfile/actions?query=workflow%3AJSON)
+
 [![Docker Build Status](https://img.shields.io/docker/cloud/build/tmknom/template-dockerfile.svg)](https://hub.docker.com/r/tmknom/template-dockerfile/builds/)
 [![Docker Automated build](https://img.shields.io/docker/cloud/automated/tmknom/template-dockerfile.svg)](https://hub.docker.com/r/tmknom/template-dockerfile/)
 [![MicroBadger Size](https://img.shields.io/microbadger/image-size/tmknom/template-dockerfile.svg)](https://microbadger.com/images/tmknom/template-dockerfile)
