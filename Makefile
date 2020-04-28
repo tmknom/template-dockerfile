@@ -69,6 +69,8 @@ format-json:
 format-yaml:
 	docker run --rm -v "$(CURDIR):/work" tmknom/prettier --parser=yaml --write '**/*.y*ml'
 
+release: ## Release GitHub
+	version=$$(cat VERSION) && git tag "$${version}" && git push origin "$${version}"
 
 # https://postd.cc/auto-documented-makefile/
 help: ## Show help
